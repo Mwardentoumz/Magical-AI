@@ -15,10 +15,10 @@ import { formSchema } from "./constants";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ChatCompletionRequestMessage } from "openai";
-import { Empty } from "@/components/empty";
+import { Empty } from "@/components/ui/empty";
 import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
-import UserAvatar from "@/components/user-avatar";
+import { UserAvatar } from "@/components/User-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 
 
@@ -71,7 +71,7 @@ const ConversationPage = () => {
                             <FormField name="prompt" render={({ field }) => (
                                 <FormItem className="col-span-12 lg:col-span-10">
                                     <FormControl className="m-0 p-0">
-                                        <Input className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent" disabled={isLoading} placeholder="How do I become smart?" {...field} />
+                                        <Input className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent ml-2" disabled={isLoading} placeholder="How do I become smart?" {...field} />
                                     </FormControl>
                                 </FormItem>
                             )} />
@@ -98,7 +98,9 @@ const ConversationPage = () => {
                                 className={cn("p-8 w-full flex items-start gap-x-8 rounded-lg", message.role === "user" ? "bg-white border border-black/10" : "bg-muted" )}
                              >
                                 {message.role === "user" ? <UserAvatar/> : <BotAvatar/>}
+                                <p className="text-sm">
                                 {message.content}
+                                </p>
                             </div>
                         ))}
                     </div>
