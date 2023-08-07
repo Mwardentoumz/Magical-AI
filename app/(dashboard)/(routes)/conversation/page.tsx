@@ -10,17 +10,17 @@ import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
-import { Form, FormControl, FormField, FormItem } from "@/test/components/ui/form";
-import { Heading } from "@/test/components/heading";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Heading } from "@/components/heading";
 import { formSchema } from "./constants";
-import { Input } from "@/test/components/ui/input";
-import { Button } from "@/test/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { ChatCompletionRequestMessage } from "openai";
-import { Empty } from "@/test/components/ui/empty";
-import { Loader } from "@/test/components/loader";
+import { Empty } from "@/components/ui/empty";
+import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/test/components/user-avatar";
-import { BotAvatar } from "@/test/components/bot-avatar";
+import { UserAvatar } from "@/components/user-avatar";
+import { BotAvatar } from "@/components/bot-avatar";
 
 import { useProModal } from "@/hooks/use-pro-modal";
 
