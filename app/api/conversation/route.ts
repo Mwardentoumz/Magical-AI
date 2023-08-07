@@ -44,8 +44,6 @@ export async function POST(
     });
 
 
-    await incrementApiLimit();
-    
     if (!isPro) {
       await incrementApiLimit();
     }
