@@ -4,7 +4,7 @@ import { MessageSquare, ArrowRight, ImageIcon, VideoIcon, Music, Code } from "lu
 import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/test/components/ui/card";
 
 const tools = [
   {

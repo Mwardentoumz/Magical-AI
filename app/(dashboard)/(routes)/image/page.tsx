@@ -10,14 +10,14 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
-import { Heading } from "@/components/heading";
-import { Button } from "@/components/ui/button";
-import { Card, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Loader } from "@/components/loader";
-import { Empty } from "@/components/ui/empty";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Heading } from "@/test/components/heading";
+import { Button } from "@/test/components/ui/button";
+import { Card, CardFooter } from "@/test/components/ui/card";
+import { Input } from "@/test/components/ui/input";
+import { Form, FormControl, FormField, FormItem } from "@/test/components/ui/form";
+import { Loader } from "@/test/components/loader";
+import { Empty } from "@/test/components/ui/empty";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/test/components/ui/select";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { amountOptions, formSchema, resolutionOptions } from "./constants";

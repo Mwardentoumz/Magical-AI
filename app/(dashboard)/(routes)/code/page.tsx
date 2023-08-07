@@ -10,16 +10,16 @@ import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 
-import { BotAvatar } from "@/components/bot-avatar";
-import { UserAvatar } from "@/components/user-avatar";
-import { Heading } from "@/components/heading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { BotAvatar } from "@/test/components/bot-avatar";
+import { UserAvatar } from "@/test/components/user-avatar";
+import { Heading } from "@/test/components/heading";
+import { Button } from "@/test/components/ui/button";
+import { Input } from "@/test/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem } from "@/test/components/ui/form";
 import { cn } from "@/lib/utils";
-import { Loader } from "@/components/loader";
-import { Empty } from "@/components/ui/empty";
+import { Loader } from "@/test/components/loader";
+import { Empty } from "@/test/components/ui/empty";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";

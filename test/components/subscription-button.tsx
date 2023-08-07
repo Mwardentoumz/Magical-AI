@@ -4,7 +4,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-import { checkSubscription } from '@/lib/subscription';
+
 import { Button } from './ui/button';
 import { Zap } from 'lucide-react';
 import { toast } from 'react-hot-toast';
