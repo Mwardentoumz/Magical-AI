@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/test/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/test/components/ui/sheet";
-import { Sidebar } from "@/test/components/ui/sidebar";
+import { Sidebar } from "@/test/components/sidebar";
 
 export const MobileSidebar = ({
   apiLimitCount = 0,
