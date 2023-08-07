@@ -22,7 +22,7 @@ import { formSchema } from "./constants";
 const VideoPage = () => {
 //   const proModal = useProModal();
   const router = useRouter();
-  const [music, setMusic] = useState<string>();
+  const [video, setVideo] = useState<string>();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -35,12 +35,12 @@ const VideoPage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      setMusic(undefined);
+      setVideo(undefined);
 
-      const response = await axios.post('/api/music', values);
+      const response = await axios.post('/api/video', values);
       console.log(response)
 
-      setMusic(response.data.audio);
+      setVideo(response.data[0]);
       form.reset();
     } catch (error: any) {
     //   if (error?.response?.status === 403) {
@@ -87,7 +87,7 @@ const VideoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent ml-2"
                       disabled={isLoading} 
-                      placeholder="Piano solo" 
+                      placeholder="clown fish swimming in the ocean" 
                       {...field}
                     />
                   </FormControl>
@@ -104,13 +104,13 @@ const VideoPage = () => {
             <Loader />
           </div>
         )}
-        {!music && !isLoading && (
-          <Empty label="No music generated." />
+        {!video && !isLoading && (
+          <Empty label="No video generated." />
         )}
-        {music && (
-          <audio controls className="w-full mt-8">
-            <source src={music} />
-          </audio>
+        {video && (
+          <video controls className="w-full mt-8 aspect-video rounded-lg border bg-black">
+            <source src={video} />
+          </video>
         )}
       </div>
     </div>
