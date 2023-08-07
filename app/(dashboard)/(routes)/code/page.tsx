@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 
 import { BotAvatar } from "@/components/bot-avatar";
+import { UserAvatar } from "@/components/user-avatar";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,7 +19,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 import { Loader } from "@/components/loader";
-import { UserAvatar } from "@/components/User-avatar";
 import { Empty } from "@/components/ui/empty";
 import { useProModal } from "@/hooks/use-pro-modal";
 

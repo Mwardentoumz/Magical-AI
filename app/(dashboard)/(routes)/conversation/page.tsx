@@ -19,7 +19,7 @@ import { ChatCompletionRequestMessage } from "openai";
 import { Empty } from "@/components/ui/empty";
 import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
-import { UserAvatar } from "@/components/User-avatar";
+import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 
 import { useProModal } from "@/hooks/use-pro-modal";
